@@ -4,55 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Sobre Wheels</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    /* Encabezado con el título y logo */
     <header>
-        <h1>TODO SOBRE WHEELS</h1>
-        /* Aquí irá el logo más adelante */
-        <img src="logo.png" alt="Logo Todo Sobre Wheels" width="100">
+        <div class="header-container">
+            <img src="logo.png" alt="Logo Todo Sobre Wheels" class="logo">
+            <h1>TODO SOBRE WHEELS</h1>
+            <button class="user-button" title="Perfil de usuario">👤</button>
+        </div>
     </header>
 
-    /* Menú de navegación con enlaces */
     <nav>
-        <ul>
+        <ul class="nav-list">
             <li><a href="americanos.html">Vehículos americanos</a></li>
             <li><a href="alemanes.html">Vehículos alemanes</a></li>
             <li><a href="japoneses.html">Vehículos japoneses</a></li>
             <li><a href="koreanos.html">Vehículos Coreanos</a></li>
-            <li><a href="formulario.html">¡¡Suscríbete!!</a></li>
+            <li class="nav-right"><a href="formulario.html">¡¡Suscríbete!!</a></li>
         </ul>
     </nav>
 
-    /* Segundo encabezado */
     <h2>BIENVENIDO, disfruta sobre ruedas</h2>
 
-    /* Vídeo (más adelante en CSS) */
-    <section>
-        <video controls>
-            <source src="video-coche.mp4" type="video/mp4">
+    <section class="video-wrapper">
+        <video autoplay loop muted playsinline>
+            <source src="..\Lamborghini Burnouts and Donuts.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
+        <p class="video-autor">Vídeo propiedad de @nycars ©</p>
     </section>
-
-    /*-- Texto amplio con historia o información sobre los automóviles */
+    
     <section>
         <p>
-            Aquí irá un texto amplio con información sobre la historia de los automóviles.
-            Se pueden mencionar los inicios del automóvil, la evolución de la tecnología
-            y la influencia de los coches en la sociedad.
+            La historia del automóvil se remonta al siglo XVIII y se puede dividir en tres etapas: vapor, electricidad y gasolina. El primer automóvil de combustión interna fue el Benz Patent-Motorwagen, inventado por el alemán Karl Benz en 1885. 
+            Etapa de vapor 
+            El inventor francés Nicolas-Joseph Cugnot creó un vehículo a vapor alrededor de 1770.
+            Cugnot tuvo el primer accidente automovilístico de la historia.
+            Etapa de gasolina
+            En 1885, Karl Benz construyó el Benz Patent-Motorwagen, un triciclo con motor de gasolina. 
+            Benz patentó su invento en 1886 y comenzó a producirlo en 1888. 
+            Gottlieb Daimler y Wilhelm Maybach, de Stuttgart, diseñaron su propio automóvil en 1889. 
+            Producción masiva 
+            En 1900, la producción masiva de automóviles había ya empezado en Francia y Estados Unidos.
+            En 1908, Henry Ford comenzó a producir automóviles en una cadena de montaje.
+            El certificado de patente del Benz Patent-Motorwagen forma parte del Programa Memoria del Mundo de la Unesco. 
         </p>
     </section>
 
-    /* Galería de imágenes con flechas (más adelante en CSS y JS) */
-    <section>
-        <button>&lt;</button> <!-- Flecha izquierda -->
-        <img src="imagen1.jpg" alt="Coche 1" width="300">
-        <button>&gt;</button> <!-- Flecha derecha -->
-    </section>
+    <section class="galeria">
+        <button>&lt;</button>
+        
+        <img src="AMG.png" alt="Coche 1">
+        <img src="BMW-M3.jpeg" alt="Coche 2">
+        <img src="Ferrari-458.png" alt="Coche 3">
+        <img src="I30N.jpg" alt="Coche 4">
+        <img src="lexus.png" alt="Coche 5">
+        <img src="porsche.png" alt="Coche 6">
+        <img src="ShelbyGT.jpg" alt="Coche 7">
+      
+        <button>&gt;</button>
+      </section>
 
-    /* Footer con dirección */
     <footer>
         <p>Todo sobre Wheels. Calle del Padre Claret SN, 28002 (Madrid)</p>
     </footer>
