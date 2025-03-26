@@ -1,58 +1,242 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coches Alemanes - Todo Sobre Wheels</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coches Alemanes - Todo Sobre Wheels</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("fondo-alemania.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: #212121;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin: 0;
+      text-shadow: 1px 2px 5px black;
+    }
+
+    .logo {
+    width: 100px;
+    height: auto;
+    margin-top: 75px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #212121;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.85);
+      border-radius: 10px;
+      color: #212121;
+    }
+
+    h3 {
+      color: #212121;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: left;
+      background-color: #f2f2f2;
+    }
+
+    table th {
+      background-color: #424242;
+      color: white;
+    }
+
+    table tr:hover {
+      background-color: #e0e0e0;
+    }
+
+    table td img {
+      width: 50px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .user-button {
+    background: none;
+    border: none;
+    color: #FFEB3B; /* amarillo intenso */
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 75px;
+    transition: color 0.3s ease;
+    }
+
+    button {
+      padding: 12px 2px;
+      background-color: #212121;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #FFEB3B;
+    }
+
+    footer {
+      background-color: #03A9F4;
+      color: white;
+      text-align: left;
+      padding: 10px 20px;
+      font-size: 0.75rem;
+    }
+
+    span[lang="de"] {
+      color: #FFEB3B;
+      font-style: italic;
+    }
+    .video-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.video-wrapper video {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+
+.video-caption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+  </style>
 </head>
 <body>
 
-    <!-- Encabezado -->
+  <div class="contenido">
     <header>
-        <h1>TODO SOBRE WHEELS</h1>
-        <img src="logo.png" alt="Logo Todo Sobre Wheels" width="100">
-    </header>
+        <div class="header-container">
+        <img src="logo.png" alt="Logo Todo Sobre Wheels" class="logo">
+        <h1>TODO SOBRE <span lang="de" title="Wheels en alemán">RÄDER</span></h1>
+        <button class="user-button" title="Perfil de usuario">👤</button>
+        </div>
+        </header>
 
-    <!-- Subtítulo -->
-    <h2>Coches Alemanes</h2>
+    <h2>Vehículos Alemanes</h2>
 
-    <!-- Texto -->
     <section>
-        <p>
-            Alemania es sinónimo de ingeniería de precisión. Marcas como BMW, Mercedes-Benz, Audi y Porsche han establecido 
-            los estándares del lujo, la seguridad y la tecnología en el sector automotriz. Sus vehículos combinan potencia 
-            y elegancia como pocos en el mundo.
-        </p>
+      <p>
+        Alemania es sinónimo de ingeniería de precisión. Marcas como BMW, Mercedes-Benz, Audi y Porsche han establecido 
+        los estándares del lujo, la seguridad y la tecnología en el sector automotriz. Sus vehículos combinan potencia 
+        y elegancia como pocos en el mundo.
+      </p>
 
-        <h3>Marcas y sus eslóganes</h3>
-        <table border="1">
-            <tr>
-                <th>Marca</th>
-                <th>Eslogan</th>
-            </tr>
-            <tr>
-                <td>BMW</td>
-                <td>El placer de conducir</td>
-            </tr>
-            <tr>
-                <td>Mercedes-Benz</td>
-                <td>Lo mejor o nada</td>
-            </tr>
-            <tr>
-                <td>Audi</td>
-                <td>A la vanguardia de la técnica</td>
-            </tr>
-        </table>
-        
-        <!-- Volver a la página inicial -->
-        <p><a href="index.html"><button>Volver al inicio</button></a></p>
+      <h3>Marcas, Eslóganes y Símbolos</h3>
+      <table>
+        <tr>
+          <th>Marca</th>
+          <th>Eslogan</th>
+          <th>Símbolo</th>
+        </tr>
+        <tr>
+          <td>BMW</td>
+          <td>El placer de conducir</td>
+          <td><img src="BMW.svg" alt="BMW Logo"></td>
+        </tr>
+        <tr>
+          <td>Mercedes-Benz</td>
+          <td>Lo mejor o nada</td>
+          <td><img src="mercedes.png" alt="Mercedes-Benz Logo"></td>
+        </tr>
+        <tr>
+          <td>Audi</td>
+          <td>A la vanguardia de la técnica</td>
+          <td><img src="audi.png" alt="Audi Logo"></td>
+        </tr>
+      </table>
 
+      <p><a href="index.html"><button>Volver al inicio</button></a></p>
     </section>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Todo sobre Wheels. Calle del Padre Claret SN, 28002 (Madrid)</p>
-    </footer>
+  <h3>Ingeniería en acción</h3>
+<div class="video-wrapper">
+  <video autoplay loop muted playsinline>
+    <source src="BMW E92 M3.mp4" type="video/mp4">
+    Tu navegador no soporta el vídeo.
+  </video>
+  <p class="video-caption">BMW BMW-M3 en circuito – Drift de precisión alemana 🇩🇪</p>
+</div>
+
+  <footer>
+    <p>Todo sobre Wheels. Calle del Padre Claret SN, 28002 (Madrid)</p>
+  </footer>
 
 </body>
 </html>
