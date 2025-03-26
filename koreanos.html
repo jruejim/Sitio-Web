@@ -1,50 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coches Coreanos - Todo Sobre Wheels</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coches Coreanos - Todo Sobre Wheels</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("fondo-corea.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: #F44336;
+      padding: 30px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-top: 75px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: black;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .user-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-top: 75px;
+    }
+
+    .user-button:hover {
+      color: #FFCDD2;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0;
+      padding-top: 30px;
+      font-weight: bold;
+      font-style: oblique;
+      color: #2962FF;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+      font-weight: bold;
+      color: #212121;
+      padding: 20px;
+    }
+
+    h3 {
+      text-align: left;
+      margin-top: 30px;
+      color: #2962FF;
+      font-size: 1.2rem;
+    }
+
+    .modelo-selector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .modelo-selector label {
+      margin: 5px;
+      cursor: pointer;
+      padding: 8px 16px;
+      background-color: #2962FF;
+      color: white;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    .modelo-selector label:hover {
+      background-color: #0D47A1;
+    }
+
+    .modelo-selector input[type="radio"] {
+      display: none;
+    }
+
+    .modelo-imagenes img {
+      display: none;
+      width: 700px;
+      height: 400px;
+      object-fit: cover;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transform: scale(0.95);
+      opacity: 0;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    #ioniq:checked ~ .modelo-imagenes .img-ioniq,
+    #ev6:checked ~ .modelo-imagenes .img-ev6,
+    #g80:checked ~ .modelo-imagenes .img-g80 {
+      display: block;
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #2962FF;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      margin-top: 30px;
+    }
+
+    button:hover {
+      background-color: #0D47A1;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #03A9F4;
+      color: white;
+      text-align: left;
+      padding: 10px 20px;
+      font-size: 0.75rem;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Encabezado -->
+  <div class="contenido">
     <header>
+      <div class="header-container">
+        <img src="logo.png" alt="Logo Todo Sobre Wheels" class="logo">
         <h1>TODO SOBRE WHEELS</h1>
-        <img src="logo.png" alt="Logo Todo Sobre Wheels" width="100">
+        <button class="user-button" title="Perfil de usuario">👤</button>
+      </div>
     </header>
 
-    <!-- Subtítulo -->
-    <h2>Coches Coreanos</h2>
+    <h2>VEHÍCULOS COREANOS SOBRE RUEDAS</h2>
 
-    <!-- Texto -->
     <section>
-        <p>
-            Corea del Sur ha ganado protagonismo mundial gracias a marcas como Hyundai, Kia y Genesis. Su ascenso se ha basado 
-            en ofrecer calidad, diseño atractivo y precios competitivos. Hoy en día lideran la innovación eléctrica y digital.
-        </p>
+      <p>
+        Corea del Sur se ha consolidado como líder en innovación automovilística. Con diseños vanguardistas, tecnología eléctrica avanzada y una visión sostenible, marcas como Hyundai, Kia y Genesis marcan el futuro del automóvil global.
+      </p>
 
-        <h3>Innovación tecnológica</h3>
-        <p>
-            Con modelos como el Hyundai Ioniq 5 o el Kia EV6, los coches coreanos apuestan por un futuro sostenible. Además, 
-            la marca Genesis compite en el segmento premium con un enfoque en el lujo moderno y tecnologías avanzadas.
-        </p>
+      <blockquote>
+        “Electric soul. Korean innovation.” — El impulso moderno sobre ruedas.
+      </blockquote>
 
-        <h3>Modelos representativos</h3>
-        <ul>
-            <li>Hyundai Ioniq 5</li>
-            <li>Kia EV6</li>
-            <li>Genesis G80 Electrified</li>
-        </ul>
-        
-        <!-- Volver a la página inicial -->
-        <p><a href="index.html"><button>Volver al inicio</button></a></p>
+      <h3>Modelos emblemáticos</h3>
 
+      <div class="modelo-selector">
+        <input type="radio" name="modelo" id="ioniq" checked>
+        <label for="ioniq">Hyundai Ioniq</label>
+
+        <input type="radio" name="modelo" id="ev6">
+        <label for="ev6">Kia EV6</label>
+
+        <input type="radio" name="modelo" id="g80">
+        <label for="g80">Genesis G80</label>
+
+        <div class="modelo-imagenes">
+          <img src="ioniq5.jpg" alt="Hyundai Ioniq" class="img-ioniq">
+          <img src="ev6.jpg" alt="Kia EV6" class="img-ev6">
+          <img src="g80.jpg" alt="Genesis G80" class="img-g80">
+        </div>
+      </div>
+
+      <p><a href="index.html"><button>Volver al inicio</button></a></p>
     </section>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Todo sobre Wheels. Calle del Padre Claret SN, 28002 (Madrid)</p>
-    </footer>
+  <footer>
+    <p>Todo sobre Wheels. Calle del Padre Claret SN, 28002 (Madrid)</p>
+  </footer>
 
 </body>
 </html>
