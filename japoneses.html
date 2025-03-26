@@ -1,50 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coches Japoneses - Todo Sobre Wheels</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coches Japoneses - Todo Sobre Wheels</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      font-family: 'Verdana', sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("fondo-japon.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: #F44336;
+      padding: 30px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-top: 75px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: black;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .user-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-top: 75px;
+    }
+
+    .user-button:hover {
+      color: #FFCDD2;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0;
+      padding-top: 30px;
+      font-weight: bold;
+      font-style: oblique;
+      color: #D50000;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+      font-weight: bold;
+      color: #212121;
+      padding: 20px;
+    }
+
+    h3 {
+      text-align: left;
+      margin-top: 30px;
+      color: #D50000;
+      font-size: 1.2rem;
+    }
+
+    .modelo-selector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .modelo-selector label {
+      margin: 5px;
+      cursor: pointer;
+      padding: 8px 16px;
+      background-color: #D50000;
+      color: white;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    .modelo-selector label:hover {
+      background-color: #B71C1C;
+    }
+
+    .modelo-selector input[type="radio"] {
+      display: none;
+    }
+
+    .modelo-imagenes img {
+      display: none;
+      width: 700px;
+      height: 400px;
+      object-fit: cover;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transform: translateY(20px);
+      opacity: 0;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    #supra:checked ~ .modelo-imagenes .img-supra,
+    #skyline:checked ~ .modelo-imagenes .img-skyline,
+    #rx7:checked ~ .modelo-imagenes .img-rx7 {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #D50000;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      margin-top: 30px;
+    }
+
+    button:hover {
+      background-color: #B71C1C;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #03A9F4;
+      color: white;
+      text-align: left;
+      padding: 10px 20px;
+      font-size: 0.75rem;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Encabezado -->
+  <div class="contenido">
     <header>
+      <div class="header-container">
+        <img src="logo.png" alt="Logo Todo Sobre Wheels" class="logo">
         <h1>TODO SOBRE WHEELS</h1>
-        <img src="logo.png" alt="Logo Todo Sobre Wheels" width="100">
+        <button class="user-button" title="Perfil de usuario">👤</button>
+      </div>
     </header>
 
-    <!-- Subtítulo -->
-    <h2>Coches Japoneses</h2>
+    <h2>VEHÍCULOS JAPONESES SOBRE RUEDAS</h2>
 
-    <!-- Texto -->
     <section>
-        <p>
-            Japón ha revolucionado el mundo del automóvil con coches accesibles, duraderos y eficientes. Conocidos 
-            por su fiabilidad, marcas como Toyota, Nissan y Honda también han producido algunos de los deportivos más legendarios.
-        </p>
+      <p>
+        Los coches japoneses destacan por su fiabilidad, tecnología y diseño vanguardista. Desde los icónicos deportivos como el Toyota Supra y el Nissan Skyline, hasta el legendario Mazda RX-7, Japón ha dado forma a una cultura automovilística admirada en todo el mundo.
+      </p>
 
-        <h3>Cultura JDM</h3>
-        <p>
-            JDM (Japanese Domestic Market) hace referencia a vehículos destinados al mercado japonés. Estos modelos son 
-            altamente valorados en el mundo del tuning y el drifting por su ligereza, motores turbo y tracción trasera.
-        </p>
+      <blockquote>
+        “Japanese engineering, timeless performance.” – Espíritu del JDM.
+      </blockquote>
 
-        <h3>Modelos icónicos</h3>
-        <ul>
-            <li>Toyota Supra MK4</li>
-            <li>Nissan Skyline GT-R</li>
-            <li>Mazda RX-7</li>
-        </ul>
-        
-        <!-- Volver a la página inicial -->
-        <p><a href="index.html"><button>Volver al inicio</button></a></p>
+      <h3>Modelos emblemáticos</h3>
 
+      <div class="modelo-selector">
+        <input type="radio" name="modelo" id="supra" checked>
+        <label for="supra">Toyota Supra</label>
+
+        <input type="radio" name="modelo" id="skyline">
+        <label for="skyline">Nissan Skyline</label>
+
+        <input type="radio" name="modelo" id="rx7">
+        <label for="rx7">Mazda RX-7</label>
+
+        <div class="modelo-imagenes">
+          <img src="supra.jpg" alt="Toyota Supra" class="img-supra">
+          <img src="skyline.jpg" alt="Nissan Skyline" class="img-skyline">
+          <img src="rx7.jpg" alt="Mazda RX-7" class="img-rx7">
+        </div>
+      </div>
+
+      <p><a href="index.html"><button>Volver al inicio</button></a></p>
     </section>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Todo sobre Wheels. Calle del Padre Claret SN, 28002 (Madrid)</p>
-    </footer>
+  <footer>
+    <p>Todo sobre Wheels. Calle del Padre Claret SN, 28002 (Madrid)</p>
+  </footer>
 
 </body>
 </html>
