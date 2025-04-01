@@ -28,6 +28,7 @@ html, body {
     padding: 0 20px;}
 
   header {
+      position: fixed;
     background-color: #F44336;
     padding: 30px;}
 
