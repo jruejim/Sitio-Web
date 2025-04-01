@@ -120,7 +120,7 @@ html, body {
     margin-top: 75px;
     transition: color 0.3s ease;}
 
-  button {
+  .volver-inicio {
     padding: 12px 2px;
     background-color: #212121;
     color: white;
@@ -131,7 +131,7 @@ html, body {
     margin-top: 30px;
     transition: background-color 0.3s ease;}
 
-  button:hover {
+  .volver-inicio:hover {
     background-color: #FFEB3B;}
 
   footer {
