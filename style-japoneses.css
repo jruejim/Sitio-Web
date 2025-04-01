@@ -154,7 +154,7 @@ html, body {
     transform: translateY(0);
     opacity: 1;}
 
-  button {
+    .volver-inicio {
     padding: 12px 24px;
     background-color: #D50000;
     color: white;
@@ -167,7 +167,7 @@ html, body {
     transition: all 0.3s ease;
     margin-top: 30px;}
 
-  button:hover {
+    .volver-inicio:hover {
     background-color: #B71C1C;
     transform: scale(1.05);}
 
