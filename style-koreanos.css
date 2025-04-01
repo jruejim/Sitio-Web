@@ -25,12 +25,21 @@ html, body {
 
   .contenido {
     flex: 1;
-    padding: 0 20px;}
+    padding: 0 20px;
+    margin-top: 120px; /* Añade un margen superior igual a la altura del header */
+  }
 
+  /* Header fijo */
   header {
-      position: fixed;
-    background-color: #F44336;
-    padding: 30px;}
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Alinea el header al borde superior */
+    left: 0;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    background-color: #F44336; /* Mantén el color de fondo */
+    padding: 20px 30px; /* Ajusta el padding para que no ocupe demasiado espacio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Mantén la sombra */
+  }
 
   .header-container {
     display: flex;
