@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo Sobre Wheels</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page-container">
 
     <header>
       <div class="header-container">
-        <img src="logo.png" alt="Logo Todo Sobre Wheels" class="logo" />
+        <img src="logo.png" alt="Logo Todo Sobre Wheels" class="logo">
         <h1>TODO SOBRE WHEELS</h1>
         <button class="user-button" title="Perfil de usuario">👤</button>
       </div>
@@ -30,15 +30,19 @@
     <main>
       <h2>BIENVENIDO, disfruta sobre ruedas</h2>
 
+      <!-- Sección del video -->
       <section class="video-wrapper">
+        <h2>Vídeo destacado</h2>
         <video autoplay loop muted playsinline>
-          <source src="Lamborghini-Burnouts-and-Donuts.mp4" type="video/mp4" />
+          <source src="Lamborghini-Burnouts-and-Donuts.mp4" type="video/mp4">
           Tu navegador no soporta el elemento de video.
         </video>
         <p class="video-autor">Vídeo propiedad de @nycars ©</p>
       </section>
 
+      <!-- Sección de historia -->
       <section>
+        <h2>Historia del automóvil</h2>
         <p>
           La historia del automóvil se remonta al siglo XVIII y se puede dividir en tres etapas: vapor, electricidad y gasolina.
           El primer automóvil de combustión interna fue el Benz Patent-Motorwagen, inventado por el alemán Karl Benz en 1885. 
@@ -53,36 +57,38 @@
         </p>
       </section>
 
+      <!-- Galería -->
       <section class="galeria">
+        <h2>Galería de vehículos</h2>
         <button>&lt;</button>
-        <img src="AMG.png" alt="Coche 1" />
-        <img src="BMW-M3.jpeg" alt="Coche 2" />
-        <img src="Ferrari-458.png" alt="Coche 3" />
-        <img src="I30N.jpg" alt="Coche 4" />
-        <img src="lexus.png" alt="Coche 5" />
-        <img src="porsche.png" alt="Coche 6" />
-        <img src="ShelbyGT.jpg" alt="Coche 7" />
+        <img src="AMG.png" alt="Coche 1">
+        <img src="BMW-M3.jpeg" alt="Coche 2">
+        <img src="Ferrari-458.png" alt="Coche 3">
+        <img src="I30N.jpg" alt="Coche 4">
+        <img src="lexus.png" alt="Coche 5">
+        <img src="porsche.png" alt="Coche 6">
+        <img src="ShelbyGT.jpg" alt="Coche 7">
         <button>&gt;</button>
       </section>
     </main>
 
     <footer>
       <p>Todo sobre Wheels. Calle del Padre Claret SN, 28002 (Madrid)</p>
-      
-        <div class="language-selector">
-          <label for="idioma">🌐 Idioma:</label>
-          <select id="idioma">
-            <option value="es">Castellano</option>
-            <option value="en">English</option>
-            <option value="de">Deutsch</option>
-            <option value="jp">日本語</option>
-            <option value="kr">한국어</option>
-          </select>
-        </div>
-      </footer>
+      <div class="language-selector">
+        <label for="idioma">🌐 Idioma:</label>
+        <select id="idioma">
+          <option value="es">Castellano</option>
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="jp">日本語</option>
+          <option value="kr">한국어</option>
+        </select>
+      </div>
+    </footer>
 
   </div>
- 
+
+  <!-- Pop-up login -->
   <div id="loginModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -104,39 +110,43 @@
     const span = document.querySelector(".close");
     const form = document.getElementById("loginForm");
     const mensaje = document.getElementById("loginMensaje");
-  
+
     btn.onclick = () => {
-      modal.style.display = "block";};
-  
+      modal.style.display = "block";
+    };
+
     span.onclick = () => {
       modal.style.display = "none";
       mensaje.textContent = "";
-      form.reset();};
-  
+      form.reset();
+    };
+
     window.onclick = (event) => {
       if (event.target === modal) {
         modal.style.display = "none";
         mensaje.textContent = "";
         form.reset();
-      }};
-  
+      }
+    };
+
     form.onsubmit = (e) => {
       e.preventDefault();
-      mensaje.textContent = "Disculpa las molestias, este usuario no existe";};
+      mensaje.textContent = "Disculpa las molestias, este usuario no existe";
+    };
   </script>
-  
+
   <script>
-    const selectorIdioma = document.getElementById('selector-idioma');
-  
-    selectorIdioma.addEventListener('change', () => {
+    const selectorIdioma = document.getElementById("idioma");
+
+    selectorIdioma.addEventListener("change", () => {
       const idioma = selectorIdioma.value;
-  
       if (idioma) {
         alert("Lo sentimos, esta parte está en construcción.");
-        selectorIdioma.value = ""; // Resetea la selección
+        selectorIdioma.value = "";
       }
     });
   </script>
-  
+
 </body>
 </html>
+
