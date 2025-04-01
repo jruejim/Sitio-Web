@@ -140,7 +140,7 @@ html, body {
     transform: scale(1);
     opacity: 1;}
 
-  button {
+  .volver-inicio {
     padding: 12px 24px;
     background-color: #2962FF;
     color: white;
@@ -153,7 +153,7 @@ html, body {
     transition: all 0.3s ease;
     margin-top: 30px;}
 
-  button:hover {
+  .volver-inicio:hover {
     background-color: #0D47A1;
     transform: scale(1.05);}
 
